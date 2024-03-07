@@ -1,10 +1,12 @@
+require('dotenv').config();
 const cityInput = document.querySelector(".city-input");
+
 const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 
-const API_KEY = "99212361f73c7c5abec49208eb95af86"; 
+const API_KEY = process.env.API_KEY; 
 
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) { 
